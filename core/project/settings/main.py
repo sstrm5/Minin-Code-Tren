@@ -28,7 +28,6 @@ environ.Env.read_env(BASE_DIR / '.env')
 SECRET_KEY = env('DJANGO_SECRET_KEY', default='mysecretkey')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -45,7 +44,9 @@ INSTALLED_APPS = [
 
     # first party
     'core.apps.questions.apps.QuestionsConfig',
-
+    'core.apps.customers.apps.CustomersConfig',
+    'core.apps.excursions.apps.ExcursionsConfig',
+    'core.apps.events.apps.EventsConfig',
     # third party
     "corsheaders",
     'nested_admin',
